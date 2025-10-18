@@ -1,6 +1,6 @@
 # 🤖 ApkifyBot - Telegram Custom Website to Android App Converter Bot Source
 
-![ApkifyBot Banner]([https://flashcomcloud.onelocal.host/download/1732732736273_6dhsd.gif](https://flashcomcloud.onelocal.host/download/1760768886_file_132.jpg))
+![ApkifyBot Banner](https://flashcomcloud.onelocal.host/download/1760768886_file_132.jpg)
 
 <p align="center">
   <a href="https://t.me/ApkifyBot" target="_blank">
@@ -159,3 +159,4 @@ Includes integration with the public **FlashCom APK Builder API**.
 ---
 
 > 🧠 *Create your own custom Telegram bot that converts any website into a beautiful Android app — host it easily on TeleBotHost using this open-source code.*
+
