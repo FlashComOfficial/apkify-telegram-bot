@@ -26,7 +26,7 @@ Built with **TBL (Tele Bot Lang)** and hosted on **TeleBotHost**.
 - *Build History* — Track all your APK builds with filtering options  
 - *Email Notifications* — Get build status updates via email  
 - *Telegram Bot Notifications* — Receive success/error reports after completion (if configured properly)  
-- *Cloud Storage* — All builds are temporarily stored on FlashCom Cloud *(auto-deleted after a few days, keep a backup)*  
+- *Cloud Storage* — All builds apks are temporarily stored on FlashCom Cloud *(auto-deleted after a few days, keep a backup)*  
 - *Free Tier* — 3 builds per day per user  
 
 ---
@@ -161,6 +161,7 @@ Includes integration with the public **FlashCom APK Builder API**.
 ---
 
 > 🧠 *Create your own custom Telegram bot that converts any website into a beautiful Android app — host it easily on TeleBotHost using this open-source code.*
+
 
 
 
