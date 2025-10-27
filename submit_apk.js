@@ -32,7 +32,7 @@ let payload = {
   website_url: apkData.website_url,
   telegram_id: user.id.toString(),
   email: apkData.email,
-  return_url: `https://t.me/ApkIfyBot`,
+  return_url: `https://t.me/` + bot.name,
   dev_telegram_id: DEV_TELEGRAM_ID,
   platform: PLATFORM,
   bot_token_telegram: BOT_TOKEN_TELEGRAM,
@@ -168,4 +168,5 @@ Api.editMessageMedia({
       ]
     }
   })
+
 }
