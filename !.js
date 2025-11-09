@@ -2,7 +2,7 @@
 
 Api.sendPhoto({
   chat_id: chat.id,
-  photo: "https://flashcomcloud.alwaysdata.net/download/1760334760_file_99.jpg",
+  photo: "https://flashcomcloud.onelocal.host/download-file/1760334760_file_99.jpg",
   caption: `<b>❌ An Inetrnal Error Occured</b>\n\n` +
           `<b>What happened:</b>\n` +
           `• There was an error while processing request\n` +
@@ -17,4 +17,5 @@ Api.sendPhoto({
       [{ text: "🆘 Contact Admin", url: ADMIN_SUPPORT_URL }]
     ]
   }
+
 })
