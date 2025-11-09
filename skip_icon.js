@@ -9,7 +9,7 @@ Api.editMessageMedia({
   message_id: request.message.message_id,
   media: {
     type: "photo",
-    media: "https://flashcomcloud.alwaysdata.net/download/1760332104_file_94.jpg",
+    media: "https://flashcomcloud.onelocal.host/download-file/1760332104_file_94.jpg",
     caption: `✅ *Icon Skipped*\n\nNow enter your *Email Address*:\n• For build notifications\n• Must be valid format\n\n*Example:* example@email.com`,
     parse_mode: "Markdown"
   },
