@@ -1,6 +1,5 @@
 //COMMAND NAME : build_filter
 
-
 let filter = params
 let telegramId = user.id.toString()
 let page = 0
@@ -28,7 +27,7 @@ if (!filter || !['latest', 'today', 'yesterday', 'all'].includes(filter)) {
     message_id: update.callback_query.message.message_id,
     media: {
       type: "photo",
-      media: "https://flashcomcloud.alwaysdata.net/download/1760334760_file_99.jpg",
+      media: "https://flashcomcloud.onelocal.host/download-file/1760334760_file_99.jpg",
       caption: "❌ <b>Invalid Filter</b>\n\nPlease select a valid filter option.",
       parse_mode: "HTML"
     },
@@ -47,7 +46,7 @@ Api.editMessageMedia({
   message_id: update.callback_query.message.message_id,
   media: {
     type: "photo",
-    media: "https://flashcomcloud.alwaysdata.net/download/1760335312_file_102.jpg",
+    media: "https://flashcomcloud.onelocal.host/download-file/1760335312_file_102.jpg",
     caption: `🔍 <b>Fetching your builds...</b>\n\n<b>Filter:</b> <code>${filter.charAt(0).toUpperCase() + filter.slice(1)}</code>`,
     parse_mode: "HTML"
   }
@@ -131,6 +130,15 @@ try {
           }])
         })
       }
+
+      pageResults.forEach(build => {
+  if (build.logMessage && build.logMessage.trim() !== '') {
+    inlineKeyboard.push([{ 
+      text: `📋 View Logs - Build ${build.ID}`, 
+      callback_data: `view_logs ${build.ID}` 
+    }])
+  }
+})
       
       let paginationButtons = []
       if (page > 0) {
@@ -156,7 +164,7 @@ try {
         message_id: update.callback_query.message.message_id,
         media: {
           type: "photo",
-          media: "https://flashcomcloud.alwaysdata.net/download/1760334880_file_100.jpg",
+          media: "https://flashcomcloud.onelocal.host/download-file/1760334880_file_100.jpg",
           caption: resultText,
           parse_mode: "HTML"
         },
@@ -170,7 +178,7 @@ try {
         message_id: update.callback_query.message.message_id,
         media: {
           type: "photo",
-          media: "https://flashcomcloud.alwaysdata.net/download/1760335093_file_101.jpg",
+          media: "https://flashcomcloud.onelocal.host/download-file/1760335093_file_101.jpg",
           caption: `📭 <b>No Builds Found</b>\n\nNo APK builds found for filter: <b>${filter}</b>\n\nCreate your first APK using the button below.`,
           parse_mode: "HTML"
         },
@@ -190,7 +198,7 @@ try {
       message_id: update.callback_query.message.message_id,
       media: {
         type: "photo",
-        media: "https://flashcomcloud.alwaysdata.net/download/1760334760_file_99.jpg",
+        media: "https://flashcomcloud.onelocal.host/download-file/1760334760_file_99.jpg",
         caption: `❌ <b>Error Fetching Builds</b>\n\n${errorMsg}`,
         parse_mode: "HTML"
       },
@@ -208,7 +216,7 @@ try {
     message_id: update.callback_query.message.message_id,
     media: {
       type: "photo",
-      media: "https://flashcomcloud.alwaysdata.net/download/1760334760_file_99.jpg",
+      media: "https://flashcomcloud.onelocal.host/download-file/1760334760_file_99.jpg",
       caption: "❌ <b>Network Error</b>\n\nFailed to connect to build service.",
       parse_mode: "HTML"
     },
