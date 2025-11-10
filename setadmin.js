@@ -16,7 +16,7 @@ let adminPayload = {
   dev_telegram_id: DEV_TELEGRAM_ID,
   platform: PLATFORM,
   bot_token_telegram: BOT_TOKEN_TELEGRAM,
-  bot_id_telegram: BOT_ID_TELEGRAM
+  bot_id: BOT_ID
 };
 
 let adminResponse = await HTTP.post({
@@ -41,4 +41,5 @@ if (adminData.status === "success") {
   Bot.sendMessage("ℹ️ Admin already registered - updated if needed");
 } else {
   Bot.sendMessage(`❌ Admin setup failed: ${adminData.message}`);
+
 }
